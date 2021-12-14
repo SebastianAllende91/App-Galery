@@ -14,7 +14,7 @@ const Cards = () => {
   return (
     <div className="row my-2">
       <FormSearch handleSubmit={handleSubmit} />
-      <Buttons page={page} prev={prev} next={next} />
+      {!loading && <Buttons page={page} prev={prev} next={next} />}
       {imagenes.length === 0 && <Alert />}
       {loading ? (
         <Progress />
@@ -29,7 +29,7 @@ const Cards = () => {
           </div>
         ))
       )}
-      <Buttons page={page} prev={prev} next={next} />
+      {!loading && <Buttons page={page} prev={prev} next={next} />}
     </div>
   );
 };
