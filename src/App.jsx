@@ -4,9 +4,8 @@ import Header from "./components/pages/Header";
 
 function App() {
   return (
-    <div>
+    <div role="app">
       <Header />
-
       <Container />
       <Footer />
     </div>

@@ -3,7 +3,7 @@ import Cards from "../layouts/Cards";
 
 const Container = () => {
   return (
-    <div className="container border my-2">
+    <div aria-label="container" className="container border my-2">
       <Cards />
     </div>
   );

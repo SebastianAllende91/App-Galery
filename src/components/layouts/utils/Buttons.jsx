@@ -4,7 +4,7 @@ const Buttons = ({ page, prev, next }) => {
   return (
     <div className="container">
       <div className="row justify-content-center">
-        <div class="col">
+        <div className="col">
           {page > 1 && (
             <button className="btn btn-success m-2 " onClick={prev}>
               prev

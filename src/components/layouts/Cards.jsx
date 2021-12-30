@@ -12,14 +12,13 @@ const Cards = () => {
   // console.log(imagenes);
 
   return (
-    <div className="row my-2">
+    <div className="my-2">
       <FormSearch handleSubmit={handleSubmit} />
       {!loading && <Buttons page={page} prev={prev} next={next} />}
       {imagenes.length === 0 && <Alert />}
-      {loading ? (
-        <Progress />
-      ) : (
-        imagenes.map((element) => (
+      {loading && <Progress />}
+      <div aria-label="imagenes" className="row my-2">
+        {imagenes.map((element) => (
           <div
             className="col "
             key={element.id}
@@ -27,8 +26,8 @@ const Cards = () => {
           >
             <CardItem el={element} />
           </div>
-        ))
-      )}
+        ))}
+      </div>
       {!loading && <Buttons page={page} prev={prev} next={next} />}
     </div>
   );
